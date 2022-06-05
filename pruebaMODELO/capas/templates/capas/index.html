@@ -1,0 +1,13 @@
+{% extends "capas/base.html" %}
+
+{% block title %}
+  TODAS LAS CAPAS DEL MUNDO
+{% endblock %}
+
+{% block content %}
+  <ul>
+    {% for capa in capas %}
+      <li><a href="{{ capa.get_absolute_url }}">{{ capa.nombre }}</a> (Descripcion: {{ capa.descripcion }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

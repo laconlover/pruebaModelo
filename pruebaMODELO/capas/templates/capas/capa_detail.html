@@ -1,0 +1,16 @@
+{% extends "capas/base.html" %}
+
+{% block title %}
+  CAPA {{ nombre }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ nombre }}</h1>
+  <h2>{{ descripcion }}</h2>
+  <p>{% if filtrada %}
+    Ha sido filtrada.
+  {% else %}
+    Contiene todos los objetos.
+  {% endif %}
+  </p>
+{% endblock %}
